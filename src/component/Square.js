@@ -1,11 +1,17 @@
 import React from 'react';
 
 class Square extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {value: null,
+        };
+    }
     render(){
         return (
             //onClick arrow function anonymous function
-            <button className="square" onClick={() => {alert('clicked');}}>  
-                {this.props.value}
+            <button className="square" 
+            onClick={() =>  this.setState({value:'X'})}>  
+                {this.state.value}
 
             </button>
         );
