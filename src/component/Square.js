@@ -7,12 +7,9 @@ function Square(props){
             //onClick arrow function anonymous function
             <button className="square" 
             onClick={props.onClick}>  
-                {this.props.value}
+                {props.value}
 
             </button>
         );
-    }
-
-
-
+    };
 export default Square;
