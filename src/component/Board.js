@@ -2,58 +2,69 @@ import React from 'react';
 import Square from './Square';
 import Calculate from './CalculateWinner';
 
-class Board extends React.Component{
-    constructor(props){
+class Board extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = {squares: Array(9).fill(null),
+        this.state = {
+            squares: Array(9).fill(null),
             xIsNext: true,  //It will flips to Determines which player goes next.
         };
     }
 
     handleClick(i) {
         const squares = this.state.squares.slice();
-        squares[i] = this.state.xIsNext ? 'X': 'O';  //declaring xIsNext to player x or o
-        this.setState({squares: squares,
-        xIsNext: !this.state.xIsNext    
-    });
-      }
-      
+        if (Calculate(squares) || squares[i]) {
+            return;
+        }
+        squares[i] = this.state.xIsNext ? 'X' : 'O';  //declaring xIsNext to player x or o
+        this.setState({
+            squares: squares,
+            xIsNext: !this.state.xIsNext
+        });
+    }
+
     renderSquare(i) {
         return (<Square value={this.state.squares[i]}
-        onClick={() => this.handleClick(i)} />
+            onClick={() => this.handleClick(i)} />
         );
     }
 
-    render(){
-        const status = 'Next Player: ' + (this.state.xIsNext? 'x': 'O');
+    render() {
+        const winner = Calculate(this.state.squares);
+        let status;
+        if (winner) {
+            status = 'Winner: ' + winner;
+        } else {
+            status = 'Next Player: ' + (this.state.xIsNext ? 'X' : 'O');
+        }
 
-
-        return(
-            <div>
-            <div className="status">{status}
-            </div>
-            <div className="board-row">
-                {this.renderSquare(0)}
-                {this.renderSquare(1)}
-                {this.renderSquare(2)}
-            </div>
-            <div className="board-row">
-                {this.renderSquare(3)}
-                {this.renderSquare(4)}
-                {this.renderSquare(5)}
-            </div>
-            <div className="board-row">
-                {this.renderSquare(6)}
-                {this.renderSquare(7)}
-                {this.renderSquare(8)}
-                </div>
+    
+    return(
+        <div>        
+    <div className="status">{status}
+    </div>
+    <div className="board-row">
+        {this.renderSquare(0)}
+        {this.renderSquare(1)}
+        {this.renderSquare(2)}
+    </div>
+    <div className="board-row">
+        {this.renderSquare(3)}
+        {this.renderSquare(4)}
+        {this.renderSquare(5)}
+    </div>
+    <div className="board-row">
+        {this.renderSquare(6)}
+        {this.renderSquare(7)}
+        {this.renderSquare(8)}
+    </div>
             </div>
         );
     }
 
 }
 
-function CalculateWinner(squares){
+/*function CalculateWinner(squares){
     const lines=[
         [0,1,2],
         [3,4,5],
@@ -74,6 +85,6 @@ function CalculateWinner(squares){
 
     return null;
 
-}
+}*/
 
 export default Board;
