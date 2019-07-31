@@ -1,4 +1,5 @@
 import React from 'react';
+import SquareCss from '../css/Square.css';
 
 function Square(props){
     
@@ -11,5 +12,5 @@ function Square(props){
 
             </button>
         );
-    };
+    }
 export default Square;
