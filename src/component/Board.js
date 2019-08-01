@@ -1,6 +1,7 @@
 import React from 'react';
 import Square from './Square';
 import Calculate from './CalculateWinner';
+import BoardCss from '../css/Board.css';
 
 class Board extends React.Component {
     constructor(props) {
