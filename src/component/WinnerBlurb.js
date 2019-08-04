@@ -9,7 +9,7 @@ function WinnerBlurb(props) {
     return(
         <div className='Blurb'>
            <h1>{this.props.text}</h1>  
-           {this.props.Winner}          
+           {this.props.status}          
         </div>
     )
 
