@@ -17,7 +17,7 @@ class Board extends React.Component {
         if (Calculate(squares) || squares[i]) {
             return;
         }
-        squares[i] = this.state.xIsNext ? '😀' : '😩';  //declaring xIsNext to player x or o
+        squares[i] = this.state.xIsNext ? '😀' : '😩';  //declaring xIsNext to player "smile" or "sad"
         this.setState({
             squares: squares,
             xIsNext: !this.state.xIsNext
