@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from '../css/Styles.css';
 import Board from './Board';
+import BoardCss from '../css/Game.css';
 //import Navbar from '../component/Navbar';
 
 class Game extends React.Component {
