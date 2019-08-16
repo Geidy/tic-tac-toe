@@ -2,6 +2,7 @@ import React from 'react';
 import Square from './Square';
 import Calculate from './CalculateWinner';
 import BoardCss from '../css/Board.css';
+//import WinnerBlurb from '../component/WinnerBlurb';
 
 class Board extends React.Component {
     constructor(props) {
@@ -36,7 +37,7 @@ class Board extends React.Component {
         if (winner) {
             status = 'Winner: ' + winner;
         } else {
-            status = 'Next Player: ' + (this.state.xIsNext ? '😀' : '😩');
+            status = 'Player: ' + (this.state.xIsNext ? '😀' : '😩');
         }
 
     
