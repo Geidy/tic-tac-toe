@@ -4,7 +4,7 @@ import Board from '../component/Board';
 
 function WinnerBlurb(props) {
 
-    const text = props('The Winner is ……..');
+    const text = props('The Winner is' + winner);
 
     return(
         <div className='Blurb'>
