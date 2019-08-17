@@ -1,0 +1,11 @@
+.Iconmap{
+    display: grid;
+    grid: 80px / auto auto auto;
+    grid-gap: 10px;
+    padding: 5px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    grid-auto-columns: auto;
+    
+}
