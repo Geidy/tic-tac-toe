@@ -1,13 +1,15 @@
-import React from 'react';
+import React from 'react'; 
+import EmojiData from '../component/EmojiData';
+//import '../css/Emoji.css';
 
 
-function EmojiCard (){
+function EmojiCard (props){
 
     return(
-        <div className="icon-container">
-            <icon src={props.icon}  className="icon" />
+        <div className="icon-card">
+            <p className="icon">{props.icon} </p>
         </div>
     )
 }
 
-export default EmojiCard;
+export default EmojiCard; 
