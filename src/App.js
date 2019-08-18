@@ -16,7 +16,7 @@ function App() {
       <nav className="Navbar">
           <ul className="ul">
             <li>
-              <a className="GameText">Icon Tic-Tac-toe</a>
+              <a className="GameText">Icon Tic-Tac-Toe</a>
               </li>
             <li className="li">
               <Link to="/" className="text">Users</Link>
