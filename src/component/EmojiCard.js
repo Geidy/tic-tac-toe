@@ -1,6 +1,6 @@
 import React from 'react'; 
 import EmojiData from '../component/EmojiData';
-//import '../css/Emoji.css';
+import '../css/EmojiCard.css';
 
 
 function EmojiCard (props){
