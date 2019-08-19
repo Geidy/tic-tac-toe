@@ -16,10 +16,10 @@ class Users extends React.Component{
     return(
         <div className="Form">
             <form>
-                <label className="text">1st Player, Name : 
+                <label className="text">1st Player, Name :  
                 <input type="text" id="player1" value={this.player1}></input>
                 </label>
-                <label className="text">2nd Player, Name : 
+                <label className="text">2nd Player, Name :  
                 <input type="text" id="player2" value={this.player2}></input>
                 </label>
                 <button className="btn" type="submit" >next</button>
