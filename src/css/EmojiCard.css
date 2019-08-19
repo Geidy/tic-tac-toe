@@ -1,6 +1,11 @@
 .icon-card{
     display: grid;
+    padding: 15px;
+    border-radius: 2px;
+    width: 70px;
+    background-color: rgb(142, 195, 241);
+    border: 5px double chocolate;
+    margin: none !important;
     
     
-
-}
+    }
