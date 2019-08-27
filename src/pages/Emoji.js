@@ -1,6 +1,7 @@
 import React from 'react';
 import EmojiCard from '../component/EmojiCard';
 import EmojiData from '../component/EmojiData';
+//import SelectEmoji from '../actions';
 import '../css/Emoji.css';
 
 class Emoji extends React.Component {
@@ -25,7 +26,7 @@ class Emoji extends React.Component {
     
 
     return(
-        <div className="Iconmap">
+        <div className="Iconmap" >
             {EmojiDataMap}
             
             
